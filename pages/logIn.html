@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Proyecto1 - Iniciar Sesion</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div id="header_logo">
+          <div style="display: flex;"> <img src="../img/header_logo.svg" alt="" id="header_icon" /></div>
+          <div><h2 class="logo_name">Soluciones y Productos de Informática Inc.<h2></h2></div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/productos.html">Productos</a></li>
+            <li><a href="../pages/nostros.html">Nosotros</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li>
+              <a href="../pages/logIn.html" style="color: blue"
+                >Iniciar Sesión</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="main_info">
+          <h1 class="login_title">Iniciar Sesión</h1>
+          <div id="log_form">
+            <form action="#" id="form">
+              <div class="log_field">
+                <input
+                  type="email"
+                  name="correo"
+                  id="correo"
+                  placeholder="Correo"
+                  required
+                  style="display: inline-block; height: 20px"
+                />
+              </div>
+              <div class="log_field">
+                <input
+                  type="password"
+                  name="contraseña"
+                  id="contraseña"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+                class="login_buttons"
+              >
+                <button
+                  type="submit"
+                  id="submit_but"
+                  style="margin-top: 20px; width: 150px"
+                >
+                  Continuar
+                </button>
+                <a href="#" class="login_create_acc">Crear Cuenta</a>
+                <a href="#" class="login_help">Necesito ayuda</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <div class="footer_link">
+            <a href="#">
+              <img src="../img/instagram.svg" alt="" style="width: 25px"
+            /></a>
+          </div>
+          <div class="footer_link">
+            <a href="#">
+              <img src="../img/facebook (1).svg" alt="" style="width: 25px"
+            /></a>
+          </div>
+          <div class="footer_link">
+            <a href="#">
+              <img src="../img/wsp.svg" alt="" style="width: 25px"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
