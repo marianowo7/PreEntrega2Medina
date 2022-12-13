@@ -1,7 +1,7 @@
+@charset "UTF-8";
 body {
   background-color: #0d1012;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-image: url(../img/index_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,11 +9,16 @@ body {
   color: white;
 }
 
-/* index - header */
+.produc {
+  background-image: url(../img/productos_background.jpg);
+}
 
-.container {
-  width: 98%;
-  margin: 0% auto;
+.nos {
+  background-image: url(../img/nosotros_background.jpg);
+}
+
+.contac {
+  background-image: url(../img/contacto_background.jpg);
 }
 
 header {
@@ -22,23 +27,25 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
-
-#header_logo {
+header #header_logo-inner {
+  display: flex;
+}
+header #header_logo {
   display: flex;
   padding: 15px;
   gap: 15px;
 }
-
-.logo_name {
+header .logo_name {
   justify-content: center;
 }
-
-#header_icon {
-  align-items: center;
+header #header_icon {
   width: 55px;
+  background-color: white;
+  height: 50px;
+  align-self: center;
+  border-radius: 5px;
 }
-
-ul {
+header ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -46,8 +53,7 @@ ul {
   padding: 0%;
   gap: 13px;
 }
-
-li > a {
+header ul li a {
   text-decoration: none;
   color: black;
   border: 1px solid black;
@@ -57,20 +63,22 @@ li > a {
   align-items: center;
 }
 
-/* main-container */
-
-.main_info {
+.container {
+  width: 98%;
+  margin: 0% auto;
+}
+.container .main_info {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   padding: 5px;
   gap: 15px;
+  /* productos */
+  /* nosotros */
+  /* login */
 }
-
-/* productos */
-
-.producto_card {
+.container .main_info .producto_card {
   display: flex;
   background-color: white;
   color: black;
@@ -78,58 +86,63 @@ li > a {
   font-size: 16px;
   gap: 15px;
 }
-
-#producto_img {
+.container .main_info .producto_card #producto_img {
   width: 100px;
 }
-
-.buy_but {
+.container .main_info .producto_card .buy_but {
   background-color: black;
   border: none;
   color: white;
   padding: 10px;
 }
-
-/* nosotros */
-
-.dueño_img,
-.user_nosotros-name,
-.login_title,
-.log_field,
-.login_create_acc,
-.login_help {
+.container .main_info .redes_contacto {
+  display: flex;
+}
+.container .main_info .redes_contacto-img {
+  padding-top: 5px;
+  width: 25px;
+}
+.container .main_info .redes_contacto-link {
+  font-size: 15px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.container .main_info .dueño_img1 {
+  width: 140px;
+}
+.container .main_info .dueño_img,
+.container .main_info .user_nosotros-name,
+.container .main_info .login_title,
+.container .main_info .log_field,
+.container .main_info .login_create_acc,
+.container .main_info .login_help {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
-
-/* contacto */
-
-.contacto,
-.horarios {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* login */
-
-input:invalid {
-  border-color: red;
+.container .main_info input:invalid {
   border: 4px solid red;
   border-radius: 6px;
 }
-
-input:valid {
-  border-color: green;
+.container .main_info input:valid {
   border: 4px solid green;
-  width: 200px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
-
-/* footer */
-
-.footer {
+.container .main_info .log_input {
+  display: inline-block;
+  height: 20px;
+}
+.container .main_info .login_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main_info .submit_but {
+  margin-top: 20px;
+  width: 150px;
+}
+.container .footer {
   margin-top: 50px;
   position: fixed;
   bottom: 0;
@@ -141,102 +154,109 @@ input:valid {
   gap: 15px;
   justify-content: center;
 }
-
-.footer_link {
+.container .contacto,
+.container .horarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.container .footer_link {
   padding: 0.2rem;
+}
+.container #footer-img {
+  width: 25px;
 }
 
 /* Media-queries */
-
 /* tablets */
-
 @media (min-width: 768px) {
-  .contacto {
+  .container .contacto {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: flex-start;
     gap: 65px;
   }
-  .horarios {
+  .container .contacto .horarios,
+  .container .contacto .redes {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 40px;
+    font-weight: bolder;
   }
 }
-
 /* Desktop */
-
 @media (min-width: 1024px) {
   .container {
     width: 80%;
   }
-  header {
+  .container header {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     padding: 25px;
     font-weight: bold;
   }
-  nav {
+  .container header nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding: 1%;
   }
-  .main_info {
+  .container .main_info {
     padding: 3%;
   }
-  .index {
-    display: flex;
-    align-items: center;
+  .container .main_info .main_text {
+    width: 80%;
   }
-
-  #main_image {
-    height: 500px;
-    width: 800px;
-  }
-  #sobre_nosotros {
+  .container .main_info #sobre_nosotros {
     align-items: center;
     display: flex;
     flex-direction: row;
     gap: 55px;
   }
-
-  #nosotros_side {
+  .container .main_info #nosotros_side {
     align-items: center;
     padding: 15px;
   }
-  .productos {
+  .container .index {
+    display: flex;
+    align-items: center;
+  }
+  .container .index #main_image {
+    height: 500px;
+    width: 800px;
+  }
+  .container .productos {
     justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .producto_card {
-    width: 450px;
+  .container .productos .producto_card {
+    width: 440px;
     height: 150px;
   }
-  .producto_card:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-  }
-  #producto_img {
+  .container .productos .producto_card #producto_img {
     width: 150px;
   }
-  .buy_but:hover {
+  .container .productos .producto_card .buy_but:hover {
     background-color: white;
     color: black;
     border: 3px solid black;
     cursor: pointer;
     transition: 0.2s;
   }
-  li > a:hover {
+  .container .producto_card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .container li a:hover {
     color: blue;
   }
 }
 
-@media (min-width: 1920px) {
-  .producto_card {
-    width: 600px;
-    height: 150px;
-  }
-}
+/*# sourceMappingURL=style.css.map */
